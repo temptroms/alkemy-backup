@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PreserveCompilationContext>false</PreserveCompilationContext>
+    <RootNamespace>Alkemy_backend</RootNamespace>
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20210305121304_update-database.cs" />
+    <Compile Remove="Migrations\20210305121304_update-database.Designer.cs" />
+    <Compile Remove="Migrations\20210316211327_modificamos_usuario_roles_UsuarioRol.cs" />
+    <Compile Remove="Migrations\20210316211327_modificamos_usuario_roles_UsuarioRol.Designer.cs" />
+    <Compile Remove="Migrations\20210316221009_modificamos_usuario_roles_UsuarioRol.cs" />
+    <Compile Remove="Migrations\20210316221009_modificamos_usuario_roles_UsuarioRol.Designer.cs" />
+    <Compile Remove="Migrations\20210316221340_modificamos_usuario_roles_UsuarioRol.cs" />
+    <Compile Remove="Migrations\20210316221340_modificamos_usuario_roles_UsuarioRol.Designer.cs" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<!-- <PackageReference Include="Microsoft.AspNet.Identity.Owin" Version="2.2.3" /> -->
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.12" />
+		<PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.12" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.12" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.12">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.12" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.12" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.12">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.Net.Compilers" Version="3.9.0-5.final">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1-beta1" />
+		<PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+	</ItemGroup>
+
+</Project>
